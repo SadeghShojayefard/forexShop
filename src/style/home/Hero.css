@@ -1,0 +1,36 @@
+@keyframes showUp {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes SlidUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-showUp {
+    opacity: 0;
+    animation: showUp 1s ease-out forwards;
+}
+
+.animate-riseOpacity {
+    opacity: 0;
+    animation: showUp 1s ease-out forwards;
+    animation-delay: 2s;
+}
+
+.animate-SlidUp {
+    opacity: 0;
+    transform: translateY(100px);
+    /* مخفی و پایین‌تر */
+    animation: SlidUp 1s ease-out forwards;
+    animation-delay: 1s;
+}
