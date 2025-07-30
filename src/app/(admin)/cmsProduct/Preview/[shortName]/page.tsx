@@ -1,4 +1,3 @@
-
 import DefinitionSection from "@/components/site/productDetail/definitionSection/DefinitionSection";
 import DetailSection from "@/components/site/productDetail/detailSection/DetailSection";
 import { getOneProduct } from "@/helper/productAction";
@@ -24,10 +23,11 @@ export default async function CmsProductPreviewPage({ params }: { params: { shor
             <DetailSection productName={pData?.name} user={pData?.userCount} star={pData?.score}
                 price={pData?.finalPriceToman}
                 href={pData?.indicatorFile} img={slides} locale={"fa"}
+                discount={pData?.discount}
             />
 
             <DefinitionSection title={t("definition")} bit64={t("64bit")}
-                text={pData?.textFA} />
+                text={pData?.textFA} locale="fa" />
         </div>
     );
 }
