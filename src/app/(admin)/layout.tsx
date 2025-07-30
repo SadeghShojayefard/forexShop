@@ -13,7 +13,7 @@ import { ReduxProvider } from "@/providers/reduxProvider";
 
 
 const vazir = localFont({
-    src: '../../fonts/vazir.woff',
+    src: "../../fonts/vazir.woff",
     variable: '--font-vazir',
     display: 'swap',
     weight: '100 300 500 700 900'
