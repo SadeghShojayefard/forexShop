@@ -8,7 +8,9 @@ import { getTranslations } from "@/i18n/getTranslations";
 export default async function CmsProductPreviewPage({ params }: { params: { shortName: string } }) {
 
 
-    const { shortName } = await params;
+    const resolvedParams = await params;
+    const { shortName } = resolvedParams;
+    
     const t = await getTranslations("fa")
     const productData = await getOneProduct(shortName);
     const pData = productData?.payload?.data;
