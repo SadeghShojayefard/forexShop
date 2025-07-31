@@ -4,13 +4,13 @@ import { getOneProduct } from "@/helper/productAction";
 import { getTranslations } from "@/i18n/getTranslations";
 
 // تعریف تایپ برای props
-type PageProps = {
+interface PageProps {
   params: { shortName: string };
-};
+}
 
 // تابع صفحه
-const CmsProductPreviewPage = async ({ params }: PageProps) => {
-  const { shortName } = params; // مستقیم از params می‌گیریم، بدون await
+export default async function CmsProductPreviewPage({ params }: PageProps) {
+  const { shortName } = params; // مستقیم از params می‌گیرم، بدون await
 
   const t = await getTranslations("fa");
   const productData = await getOneProduct(shortName);
@@ -23,7 +23,7 @@ const CmsProductPreviewPage = async ({ params }: PageProps) => {
     slides.reverse();
   }
 
-  // اگه pData وجود نداشته باشه، یه پیام خطا نشون بده
+  // اگه محصول پیدا نشد، پیام خطا نشون بده
   if (!pData) {
     return <div>محصول یافت نشد</div>;
   }
@@ -52,6 +52,4 @@ const CmsProductPreviewPage = async ({ params }: PageProps) => {
       />
     </div>
   );
-};
-
-export default CmsProductPreviewPage;
+}
