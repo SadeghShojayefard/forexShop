@@ -149,7 +149,7 @@ export default function CommentsTable() {
                                 </TableCell>
 
                                 <TableCell>
-                                    <DetailModal title="مشاهده متن کامل">
+                                    <DetailModal title="مشاهده متن کامل" action={null}>
                                         <p className="text-justify text-wrap">
                                             {item.commentText}
                                         </p>
@@ -198,13 +198,13 @@ export default function CommentsTable() {
                                     {/* user lock------------------------------------------------ */}
 
                                     {/* like of dis like------------------------------------------------ */}
-                                    {item.isBisti ?
+                                    {/* {item.isBisti ?
                                         <DeleteModal title="نظر برتر " text="آیا می خواهید این کامنت را از اسلاید شو نظرات برتر حذف کنید؟"
                                             buttonText="dislike"
-                                            deleteFunction={deleteFunction} /> :
+                                            deleteFunction={deleteFunction} action={null} /> :
                                         <DeleteModal title="نظر برتر " text="آیا می خواهید این نظر به عنوان کامنت برتر در اسلاید شو صفحه اصلی قرار گیرد؟"
                                             buttonText="like"
-                                            deleteFunction={deleteFunction} />}
+                                            deleteFunction={deleteFunction} />} */}
 
 
                                 </TableCell>
