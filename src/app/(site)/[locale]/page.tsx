@@ -4,7 +4,7 @@ import ProductList from "@/components/site/home/productList/ProductList";
 import SelectedComments from "@/components/site/home/selectedComments/SelectedComments";
 import { getTranslations } from "@/i18n/getTranslations";
 
-export default async function Home({ params }: { params: { locale: string } }) {
+export default async function Home({ params }: { params:Promise< { locale: string }> }) {
 
   const { locale } = await params;
   const t = await getTranslations(locale);
