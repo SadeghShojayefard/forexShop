@@ -1,7 +1,8 @@
 import { getTranslations } from "@/i18n/getTranslations";
 
-export default async function AboutUsPage({ params }: { params: { locale: string } }) {
-    const { locale } =  params;
+
+export default async function AboutUsPage({ params }: { params: Promise<{ { locale: string }> }) {
+    const { locale } = await  params;
     const t = await getTranslations(locale);
 
 
