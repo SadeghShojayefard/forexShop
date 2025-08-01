@@ -2,7 +2,7 @@
 import TicketContent from "@/components/account/ticketContent/TicketContent";
 import AnswerTicketAC from "@/components/account/answerTicketAC/AnswerTicketAC";
 import { getTranslations } from "@/i18n/getTranslations";
-export default async function ViewTicketsPage({ params }: { params: { locale: string } }) {
+export default async function ViewTicketsPage({ params }: { params:Promise< { locale: string }> }) {
     const { locale } = await params;
     const t = await getTranslations(locale);
 
