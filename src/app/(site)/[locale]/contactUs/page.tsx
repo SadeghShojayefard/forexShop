@@ -6,7 +6,7 @@ import { getContactUsTranslationsData } from "@/data/ContactUsTranslationsData";
 export default async function ContactUsPage({
     params,
 }: {
-    params: { locale: string };
+    params: Promise< { locale: string }>
 }) {
     const { locale } = await params;
     const { contactUsTranslations, contactUsValData, mainData } = await getContactUsTranslationsData(locale);
