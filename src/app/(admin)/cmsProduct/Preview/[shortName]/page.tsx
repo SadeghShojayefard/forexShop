@@ -6,18 +6,17 @@ import { getTranslations } from "@/i18n/getTranslations";
 // تعریف تایپ برای props
 
 // تابع صفحه
+export default async function CmsProductPreviewPage({ params }: { params: Promise<{ shortName: string }> }) {
+  const { shortName } = await params; //  'await' را حذف کنید
 
-export default async function CmsProductPreviewPage({ params }: { params:Promise< { shortName: string }> }) {
-  const { shortName } = params; //  'await' را حذف کنید
-
-    const t = await getTranslations("fa");
-    const productData = await getOneProduct(shortName);
-    const pData = productData?.payload?.data;
-    const slides = pData?.slideImage || []; // اطمینان از اینکه slides یک آرایه است، حتی اگر pData?.slideImage وجود نداشته باشد
-    if (pData?.mainImage) {
-        slides.push(pData?.mainImage);
-    }
-    slides.reverse();
+  const t = await getTranslations("fa");
+  const productData = await getOneProduct(shortName);
+  const pData = productData?.payload?.data;
+  const slides = pData?.slideImage || []; // اطمینان از اینکه slides یک آرایه است، حتی اگر pData?.slideImage وجود نداشته باشد
+  if (pData?.mainImage) {
+    slides.push(pData?.mainImage);
+  }
+  slides.reverse();
 
   return (
     <div
@@ -26,19 +25,19 @@ export default async function CmsProductPreviewPage({ params }: { params:Promise
     >
       <b className="text-2xl font-bold w-full border-b pb-2">پیش نمایش محصول</b>
       <DetailSection
-        productName={pData.name}
-        user={pData.userCount}
-        star={pData.score}
-        price={pData.finalPriceToman}
-        href={pData.indicatorFile}
+        productName={pData?.name}
+        user={pData?.userCount}
+        star={pData?.score}
+        price={pData?.finalPriceToman}
+        href={pData?.indicatorFile}
         img={slides}
         locale="fa"
-        discount={pData.discount}
+        discount={pData?.discount}
       />
       <DefinitionSection
         title={t("definition")}
         bit64={t("64bit")}
-        text={pData.textFA}
+        text={pData?.textFA}
         locale="fa"
       />
     </div>
