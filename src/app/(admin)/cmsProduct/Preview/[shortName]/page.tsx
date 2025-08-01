@@ -4,29 +4,19 @@ import { getOneProduct } from "@/helper/productAction";
 import { getTranslations } from "@/i18n/getTranslations";
 
 // تعریف تایپ برای props
-interface PageProps {
-  params: { shortName: string };
-}
 
 // تابع صفحه
 export default async function CmsProductPreviewPage({ params }: PageProps) {
-  const { shortName } = params; // مستقیم از params می‌گیرم، بدون await
+  const { shortName } = params; //  'await' را حذف کنید
 
-  const t = await getTranslations("fa");
-  const productData = await getOneProduct(shortName);
-  const pData = productData?.payload?.data;
-
-  // مدیریت خطای undefined برای slides
-  const slides = pData?.slideImage ? [...pData.slideImage] : [];
-  if (pData?.mainImage) {
-    slides.push(pData.mainImage);
+    const t = await getTranslations("fa");
+    const productData = await getOneProduct(shortName);
+    const pData = productData?.payload?.data;
+    const slides = pData?.slideImage || []; // اطمینان از اینکه slides یک آرایه است، حتی اگر pData?.slideImage وجود نداشته باشد
+    if (pData?.mainImage) {
+        slides.push(pData?.mainImage);
+    }
     slides.reverse();
-  }
-
-  // اگه محصول پیدا نشد، پیام خطا نشون بده
-  if (!pData) {
-    return <div>محصول یافت نشد</div>;
-  }
 
   return (
     <div
