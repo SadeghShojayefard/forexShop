@@ -4,8 +4,8 @@ import { getOneProduct } from "@/helper/productAction";
 
 export default async function CmsUpdateProductPage({ params }: { params: { shortName: string } }) {
 
-
-    const { status, payload } = (await getOneProduct(params.shortName))!;
+    const { shortName } = params; 
+    const { status, payload } = (await getOneProduct(shortName))!;
 
     let product = status === 'success' ? payload : [];
 
