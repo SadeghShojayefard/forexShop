@@ -5,7 +5,8 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import CardItems from "@/components/share/cardItems/CardItems";
 import Link from "next/link";
 import { getTranslations } from "@/i18n/getTranslations";
-export default async function TicketsPage({ params }: { params: { locale: string } }) {
+
+export default async function TicketsPage({ params }: { params:Promise< { locale: string }> }) {
     const { locale } = await params;
     const t = await getTranslations(locale);
 
