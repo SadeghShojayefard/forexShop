@@ -2,8 +2,8 @@
 import TicketContent from "@/components/account/ticketContent/TicketContent";
 import AnswerTicketAC from "@/components/account/answerTicketAC/AnswerTicketAC";
 import { getTranslations } from "@/i18n/getTranslations";
-export default async function ViewTicketsPage({ params }: { params: { locale: string } }) {
-    const t = await getTranslations(params.locale);
+export default async function ViewTicketsPage({ params }: { params: { id: string } }) {
+    const t = await getTranslations("fa");
 
     const sampleData = [{
         id: 1,
@@ -78,17 +78,17 @@ export default async function ViewTicketsPage({ params }: { params: { locale: st
     }
 
 
-    return (
+     return (
         <div className="w-full  flex flex-col justify-start items-start gap-2   py-5 shadow-2xl shadow-black rounded-2xl px-2 ">
             <div className="w-full flex flex-row items-center justify-start px-2 font-bold text-xl border-b   ">
                 <b className="pb-2">{t("formTicketTitle")}</b>
             </div>
             {
                 sampleData.map(item => (
-                    <TicketContent key={item.id}  {...item} locale={params.locale} support={t("support")} />
+                    <TicketContent key={item.id}  {...item} locale={"fa"} support={t("support")} />
                 ))
             }
-            <AnswerTicketAC translate={translate} valTranslate={ticketFormVal} locale={params.locale} />
+            <AnswerTicketAC translate={translate} valTranslate={ticketFormVal} locale={"fa"} />
         </div>
 
     );
