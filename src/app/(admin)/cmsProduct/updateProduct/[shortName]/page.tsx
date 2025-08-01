@@ -2,9 +2,9 @@ import UpdateProductForm from "@/components/admin/product/updateProductForm/Upda
 import { getOneProduct } from "@/helper/productAction";
 
 
-export default async function CmsUpdateProductPage({ params }: { params: { shortName: string } }) {
+export default async function CmsUpdateProductPage({ params }: { params: Promise<{ shortName: string }> }) {
 
-    const { shortName } = params;
+    const { shortName } = await params;
     const { status, payload } = (await getOneProduct(shortName))!;
     const product = status === 'success' ? payload : [];
 
