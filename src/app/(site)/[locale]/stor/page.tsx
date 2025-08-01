@@ -13,7 +13,7 @@ import { getTranslations } from "@/i18n/getTranslations";
 import { getAllProductsForSite } from "@/helper/productAction";
 
 
-export default async function storPage({ params }: { params: { locale: string } }) {
+export default async function storPage({ params }: { params:Promise< { locale: string }> }) {
     const { locale } = await params;
     const t = await getTranslations(locale);
     const latestProduct = await getAllProductsForSite("stor");
