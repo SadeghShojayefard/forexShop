@@ -7,7 +7,7 @@ import { getServerSession } from "next-auth";
 import { options } from "@/app/api/auth/[...nextauth]/options";
 import ChangeName from "@/components/account/profile/changeName/ChangeName";
 
-export default async function AccountProfilePage({ params }: { params: { locale: string } }) {
+export default async function AccountProfilePage({ params }: { params:  Promise< { locale: string } >}) {
     const { locale } =  params;
     const {
         mainData,
