@@ -2,7 +2,8 @@
 import TicketContent from "@/components/account/ticketContent/TicketContent";
 import AnswerTicketAC from "@/components/account/answerTicketAC/AnswerTicketAC";
 import { getTranslations } from "@/i18n/getTranslations";
-export default async function ViewTicketsPage({ params }: { params: { id: string } }) {
+
+export default async function ViewTicketsPage({ params }: { params: Promise<{ id: string }> }) {
     const t = await getTranslations("fa");
 
     const sampleData = [{
