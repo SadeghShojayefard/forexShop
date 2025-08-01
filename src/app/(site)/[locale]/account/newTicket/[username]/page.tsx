@@ -36,7 +36,7 @@ export default async function NewTicketsPage({ params }: { params:  Promise< { l
                     <IoReturnUpBack color="blue" size="30" />
                 </Link>
             </div>
-            <NewTicket translate={translation} username={username} valTranslate={ticketFormVal} locale={params.locale} />
+            <NewTicket translate={translation} username={username} valTranslate={ticketFormVal} locale={locale} />
         </div>
 
     );
