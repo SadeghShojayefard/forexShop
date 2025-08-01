@@ -4,7 +4,7 @@ import { array } from "zod";
 
 
 
-export async function generateMetadata({ params }: { params: { shortName: string } }) {
+export async function generateMetadata({ params }: { params:Promise< { shortName: string }> }) {
   const { shortName } = await params;
   const data = await getProductMetaTag(shortName);
   const metaTagsString = data?.payload?.data.metaTags;
