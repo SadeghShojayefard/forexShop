@@ -6,7 +6,8 @@ import { getTranslations } from "@/i18n/getTranslations";
 // تعریف تایپ برای props
 
 // تابع صفحه
-export default async function CmsProductPreviewPage({ params }: PageProps) {
+
+export default async function CmsProductPreviewPage({ params }: { params:Promise< { shortName: string }> }) {
   const { shortName } = params; //  'await' را حذف کنید
 
     const t = await getTranslations("fa");
