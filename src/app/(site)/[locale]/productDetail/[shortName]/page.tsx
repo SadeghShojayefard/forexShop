@@ -19,7 +19,7 @@ import { options } from "@/app/api/auth/[...nextauth]/options";
 import Link from "next/link";
 import { getOneProduct } from "@/helper/productAction";
 
-export default async function ProductDetailPage({ params }: { params: { locale: string, shortName: string } }) {
+export default async function ProductDetailPage({ params }: { params:Promise< { locale: string, shortName: string }> }) {
     const { locale, shortName } = await params;
     const t = await getTranslations(locale)
 
