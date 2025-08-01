@@ -4,8 +4,9 @@ import Link from "next/link";
 import { IoReturnUpBack } from "react-icons/io5";
 import { getTranslations } from "@/i18n/getTranslations";
 
-// export default function NewTicketsPage({ params }: { params: { locale: string; username: string } })
-export default async function NewTicketsPage({ params }: { params: { locale: string; username: string }; }) {
+
+
+export default async function NewTicketsPage({ params }: { params:  Promise< { locale: string; username: string }> }) {
     const t = await getTranslations(params.locale);
 
     const translation = {
