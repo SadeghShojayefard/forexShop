@@ -10,7 +10,8 @@ import {
 } from "@/components/ui/table"
 import { getOrdersForOneUser } from "@/helper/orderAction";
 import { getTranslations } from "@/i18n/getTranslations";
-export default async function AccountOrdersPage({ params }: { params: { locale: string, username: string } }) {
+
+export default async function AccountOrdersPage({ params }: { params:  Promise<  { locale: string, username: string }> }) {
 
     const { locale, username } = await params;
     const t = await getTranslations(locale);
