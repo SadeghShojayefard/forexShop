@@ -8,7 +8,7 @@ import { options } from "@/app/api/auth/[...nextauth]/options";
 import ChangeName from "@/components/account/profile/changeName/ChangeName";
 
 export default async function AccountProfilePage({ params }: { params: { locale: string } }) {
-    const { locale } = await params;
+    const { locale } =  params;
     const {
         mainData,
         changePasswordTsData,
