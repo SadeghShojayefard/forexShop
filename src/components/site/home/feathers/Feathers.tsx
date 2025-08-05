@@ -82,7 +82,7 @@ export default async function Feathers({ locale }: { locale: string }) {
 
             <div className=' px-20 mx-auto  '  >
                 <SectionsTitle firstTitle={t("feathersTitle")} secondTitle={t("feathers2Title")} />
-                <div className='grid grid-cols-2 gap-2  mt-5 w-full mb-7  justify-center items-center  '>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-5 w-full mb-7 [grid-auto-rows:1fr]">
                     {
                         helps.map(help => (
                             <CardItems key={help.id}  {...help} />
