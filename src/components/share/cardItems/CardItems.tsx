@@ -9,7 +9,7 @@ type items = {
 
 const CardItems: React.FC<items> = ({ Icon, title, text, iconColor }) => {
     return (
-        <div className='sm:col-span-full md:col-span-1 flex flex-row justify-start items-center w-full 
+         <div className='h-full sm:col-span-full md:col-span-1  flex flex-row justify-start  items-center w-full 
           border-2 border-white/30 rounded-2xl m-1 p-2 bg-white/30 backdrop-blur-md shadow-black shadow-xl   ' >
             <div className={`flex flex-row justify-center items-center p-4 text-[50px] `} >
                 <Icon className={`${iconColor}   `} />
