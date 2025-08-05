@@ -41,7 +41,7 @@ export default async function storPage({ params }: { params:Promise< { locale: s
                 </Breadcrumb>
             </div>
             <h3 className="font-extrabold text-2xl">  {t("store")}</h3>
-            <div className=" w-full grid grid-cols-4 gap-7  ">
+            <div className=" md:w-full md:grid md:grid-cols-4 md:gap-7 sm:grid-col-2 sm:gap-2 ">
 
                 {
                     latestProduct.status === "success" && latestProduct.payload.data.map((item) => (
