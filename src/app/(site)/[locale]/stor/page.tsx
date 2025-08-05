@@ -13,7 +13,7 @@ import { getTranslations } from "@/i18n/getTranslations";
 import { getAllProductsForSite } from "@/helper/productAction";
 
 
-export default async function storPage({ params }: { params:Promise< { locale: string }> }) {
+export default async function storPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     const t = await getTranslations(locale);
     const latestProduct = await getAllProductsForSite("stor");
@@ -41,18 +41,16 @@ export default async function storPage({ params }: { params:Promise< { locale: s
                 </Breadcrumb>
             </div>
             <h3 className="font-extrabold text-2xl">  {t("store")}</h3>
-            <div className=" md:w-full md:grid md:grid-cols-4 md:gap-7 sm:grid-col-2 sm:gap-2 ">
+            <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-5  mt-5 w-full bg-transparent mb-12 '>
 
                 {
                     latestProduct.status === "success" && latestProduct.payload.data.map((item) => (
-                        <div key={item.id} className="sm:col-span-2 md:col-span-1">
-                            <ProductBox img={item.mainImage} productName={item.name} star={item.score}
-                                user={item.userCount} price={locale === "fa" ? item.finalPriceToman : item.finalPriceTether}
-                                linkText={t("moreDetailBtn")} locale={locale} href={item.shortName} discount={item.discount} />
-                        </div>
+                        <ProductBox key={item.id} img={item.mainImage} productName={item.name} star={item.score}
+                            user={item.userCount} price={locale === "fa" ? item.finalPriceToman : item.finalPriceTether}
+                            linkText={t("moreDetailBtn")} locale={locale} href={item.shortName} discount={item.discount} />
+
                     ))
                 }
-
             </div>
 
         </div>
