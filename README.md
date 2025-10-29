@@ -53,8 +53,6 @@ Now open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🖼️ Screenshots
 
-You can showcase 2–3 screenshots side by side using HTML syntax (GitHub supports it):
-
 <p align="center">
   <img src="public/screenShot-1.jpg" width="30%" />
   <img src="public/screenShot-2.jpg" width="30%" />
