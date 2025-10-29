@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ ForexShop
 
-## Getting Started
+A modern e-commerce web app for selling **custom Forex indicators** built for MetaTrader 4 & 5.
+All showcased indicators are **real demo versions** designed to demonstrate their true market performance.
 
-First, run the development server:
+🔗 **Live Demo:** [forex-shop.vercel.app/en](https://forex-shop.vercel.app/en)
+
+---
+
+## 🚀 Features
+
+* 💹 Real Forex indicator demos with functional previews
+* 🌐 Bilingual interface (English / Persian)
+* 🧩 Product pages with detailed strategy descriptions
+* 💬 Direct Telegram contact for customer support
+* 🔒 Manual account binding for license security
+* ⚡ Optimized with Next.js server actions
+* 🎨 Clean UI built with Tailwind CSS
+
+---
+
+## 🧠 Tech Stack
+
+![React](https://img.shields.io/badge/React-20232A?style=flat\&logo=react\&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat\&logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat\&logo=typescript\&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat\&logo=tailwindcss\&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-764ABC?style=flat\&logo=redux\&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat\&logo=mongodb\&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?style=flat\&logo=vercel)
+
+---
+
+## ⚙️ Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/SadeghShojayefard/forexShop.git
+
+# Navigate into the project
+cd forexShop
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🖼️ Screenshots
 
-## Learn More
+You can showcase 2–3 screenshots side by side using HTML syntax (GitHub supports it):
 
-To learn more about Next.js, take a look at the following resources:
+<p align="center">
+  <img src="public/screenShot-1.jpg" width="30%" />
+  <img src="public/screenShot-2.jpg" width="30%" />
+  <img src="public/screenShot-3.jpg" width="30%" />
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Roadmap
 
-## Deploy on Vercel
+* 💬 Add live chat integration
+* 💳 Payment gateway support
+* 📈 Expand indicator product categories
+* 📊 Add user dashboard with download history
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📞 Contact
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-ForexIndicatorPro-2CA5E0?style=flat\&logo=telegram\&logoColor=white)](https://t.me/ForexIndicatorPro)
+[![Website](https://img.shields.io/badge/Website-sadegh--shojayefard.vercel.app-4285F4?style=flat\&logo=google-chrome\&logoColor=white)](https://sadegh-shojayee-fard.vercel.app/)
+[![Gmail](https://img.shields.io/badge/Gmail-sadegh.shojayefar@gmail.com-D14836?style=flat\&logo=gmail\&logoColor=white)](mailto:sadegh.shojayefar@gmail.com)
+
+</div>
+
+---
+
+## 🧑‍💻 Author
+
+**Sadegh Shojayefard**
+Frontend Developer | Forex Tools Creator
+
+---
+
+ feel free to use and modify it with credit.
